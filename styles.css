@@ -1,0 +1,217 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline;
+    color: orange;
+  }
+  
+  /* Hamburger Icon */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 4px;
+  }
+  
+  .hamburger span {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide nav links by default */
+      flex-direction: column;
+      background-color: black;
+      position: absolute;
+      top: 80px;
+      right: 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-links.show {
+      display: flex; /* Show the nav links when toggled */
+    }
+  
+    .hamburger {
+      display: flex; /* Show hamburger icon on small screens */
+    }
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background-color: black;
+    color: white;
+    height: 100vh;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .highlight {
+    color: orange;
+  }
+  
+  .subtitle {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  .description {
+    margin: 20px 0;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+  
+  .btn {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid white;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: orange;
+    color: black;
+  }
+  
+  .hero-image img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .hero {
+      flex-direction: column;
+      text-align: center;
+      height: auto;
+    }
+  
+    .hero-content {
+      max-width: 80%;
+    }
+  
+    .hero-image img {
+      max-width: 200px;
+      margin-top: 20px;
+    }
+  }
+  
+
+
+/* General transition for all elements */
+* {
+    transition: all 0.3s ease; /* Smooth transition for all elements */
+}
+
+/* Hero content fade-in effect */
+.hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s forwards; /* Animation for fade-in effect */
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image hover effect */
+.hero-image img {
+    transition: transform 0.3s ease; /* Smooth image scale on hover */
+}
+
+.hero-image img:hover {
+    transform: scale(1.1); /* Scale up the image slightly on hover */
+}
+
+/* Button hover effect */
+.btn {
+    position: relative;
+    overflow: hidden; /* To contain the pseudo-element */
+}
+
+
+
+.btn:hover {
+    color: black; /* Change text color on button hover */
+}
+
+.btn span {
+    position: relative; /* Position text above the pseudo-element */
+    z-index: 1; /* Bring text above the background effect */
+}
+
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 32px;
+    }
+  
+    .nav-links a {
+      font-size: 16px;
+      
+    }
+  
+    .hero-content {
+      max-width: 90%;
+    }
+  
+    .subtitle {
+      font-size: 20px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  
+    .btn {
+      padding: 8px 16px;
+    }
+  }
+  
