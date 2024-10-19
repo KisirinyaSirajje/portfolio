@@ -3,149 +3,149 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Styling for the navbar */
-  .navbar {
+    transition: all 0.3s ease; /* Smooth transition for all elements */
+}
+
+/* Styling for the navbar */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px; /* Adjusted padding */
     background-color: black;
-    position: relative;
-  }
-  
-  .logo {
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.logo {
     font-size: 40px;
     font-weight: bold;
     color: white;
-  }
-  
-  .nav-links {
+}
+
+.nav-links {
     list-style: none;
     display: flex;
     gap: 15px;
-  }
-  
-  .nav-links a {
+}
+
+.nav-links a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-  }
-  
-  .nav-links a:hover {
+}
+
+.nav-links a:hover {
     text-decoration: underline;
     color: orange;
-  }
-  
-  /* Hamburger Icon */
-  .hamburger {
-    display: none;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    display: none; /* Hidden by default */
     flex-direction: column;
     cursor: pointer;
     gap: 4px;
-  }
-  
-  .hamburger span {
+}
+
+.hamburger span {
     width: 30px;
     height: 3px;
     background-color: white;
-  }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
     .nav-links {
-      display: none; /* Hide nav links by default */
-      flex-direction: column;
-      background-color: black;
-      position: absolute;
-      top: 80px;
-      right: 0;
-      width: 100%;
-      text-align: center;
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        background-color: black;
+        position: absolute; /* Position absolutely */
+        top: 60px; /* Position below the navbar */
+        right: 0;
+        width: 100%; /* Full width */
+        text-align: center;
+        z-index: 999; /* Ensure it's above other content */
     }
-  
+
     .nav-links.show {
-      display: flex; /* Show the nav links when toggled */
+        display: flex; /* Show the nav links when toggled */
     }
-  
+
     .hamburger {
-      display: flex; /* Show hamburger icon on small screens */
+        display: flex; /* Show hamburger icon on small screens */
     }
-  }
-  
-  /* Hero Section */
-  .hero {
+}
+
+/* Hero Section */
+.hero {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 50px;
+    padding: 100px 10%; /* Increased padding to prevent overlap */
     background-color: black;
     color: white;
-    height: 100vh;
-  }
-  
-  .hero-content {
+    height: auto; /* Allow height to adjust */
+    margin-top: 60px; /* Push down content to avoid overlap with fixed navbar */
+}
+
+.hero-content {
     max-width: 50%;
-  }
-  
-  .highlight {
+}
+
+.highlight {
     color: orange;
-  }
-  
-  .subtitle {
+}
+
+.subtitle {
     font-size: 24px;
     margin-top: 10px;
-  }
-  
-  .description {
+}
+
+.description {
     margin: 20px 0;
     font-size: 18px;
     line-height: 1.6;
-  }
-  
-  .btn {
+}
+
+.btn {
     background-color: black;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
     border: 2px solid white;
     transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
+}
+
+.btn:hover {
     background-color: orange;
     color: black;
-  }
-  
-  .hero-image img {
+}
+
+.hero-image img {
     max-width: 300px;
     height: auto;
     border-radius: 10px;
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
     .hero {
-      flex-direction: column;
-      text-align: center;
-      height: auto;
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%; /* Adjust padding for smaller screens */
     }
-  
+
     .hero-content {
-      max-width: 80%;
+        max-width: 90%; /* Adjust max-width for small screens */
     }
-  
+
     .hero-image img {
-      max-width: 200px;
-      margin-top: 20px;
+        max-width: 200px;
+        margin-top: 20px;
     }
-  }
-  
-
-
-/* General transition for all elements */
-* {
-    transition: all 0.3s ease; /* Smooth transition for all elements */
 }
 
 /* Hero content fade-in effect */
@@ -177,8 +177,6 @@
     overflow: hidden; /* To contain the pseudo-element */
 }
 
-
-
 .btn:hover {
     color: black; /* Change text color on button hover */
 }
@@ -188,30 +186,28 @@
     z-index: 1; /* Bring text above the background effect */
 }
 
-  @media (max-width: 480px) {
+@media (max-width: 480px) {
     .logo {
-      font-size: 32px;
+        font-size: 32px;
     }
-  
+
     .nav-links a {
-      font-size: 16px;
-      
+        font-size: 16px;
     }
-  
+
     .hero-content {
-      max-width: 90%;
+        max-width: 90%;
     }
-  
+
     .subtitle {
-      font-size: 20px;
+        font-size: 20px;
     }
-  
+
     .description {
-      font-size: 16px;
+        font-size: 16px;
     }
-  
+
     .btn {
-      padding: 8px 16px;
+        padding: 8px 16px;
     }
-  }
-  
+}
